@@ -7,7 +7,6 @@
   #container {
     width: 100%;
     min-height: 100vh;
-    /* display: block; */
     background: url(./images/clipart975128.png) no-repeat center;
     background-color: black;
     background-size: cover;
