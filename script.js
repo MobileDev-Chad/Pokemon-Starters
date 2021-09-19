@@ -108,7 +108,7 @@ openBall.blue.addEventListener("click", () => {
 
 openBall.green.addEventListener("click", () => {
    if(!i){
-      pokeVoice = pokeSounds.green;
+                      pokeVoice = pokeSounds.green;
       i = openBall.green;
       m = monsters.bulbasaur;
       pokeName = " Bulbasaur?";
@@ -178,10 +178,10 @@ menuSelect.no.addEventListener("click", () => {
 menuSelect.yes.addEventListener("click", () => {
    if(i){
       myCongrats.play();
-      myMusic.pause();
+                 myMusic.pause();
       paragraph.innerHTML = ("Congratulations you have selected");
-      pokeName = pokeName.slice(0, -1);
+                    pokeName = pokeName.slice(0, -1);
       paragraph.textContent += pokeName += "!";
-      menuSelect.menu.style.display = "none";
+              
    }
   });
