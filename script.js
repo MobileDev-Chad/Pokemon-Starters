@@ -18,6 +18,7 @@ const openBall = {
   blue: document.querySelector(".pokeball:nth-of-type(2)"),
   green: document.querySelector(".pokeball:nth-of-type(3)"),
 };
+
 // Get individual images of pokemon
 const monsters = {
   charmander: document.querySelector(".charmander"),
@@ -120,41 +121,32 @@ openBall.green.addEventListener("click", () => {
 
 openBall.red.addEventListener("mouseover", () => {
   if (!i) {
-    mySound.play();
     arrow.style.display = "block";
     arrow.style.left = "-35px";
   }
 });
 openBall.red.addEventListener("mouseout", () => {
   arrow.style.display = "none";
-  mySound.pause();
-  mySound.currentTime = 0;
 });
 
 openBall.blue.addEventListener("mouseover", () => {
   if (!i) {
-    mySound.play();
     arrow.style.display = "block";
     arrow.style.left = "225px";
   }
 });
 
 openBall.blue.addEventListener("mouseout", () => {
-  mySound.pause();
-  mySound.currentTime = 0;
   arrow.style.display = "none";
 });
 
 openBall.green.addEventListener("mouseover", () => {
   if (!i) {
-    mySound.play();
     arrow.style.display = "block";
     arrow.style.left = "-300px";
   }
 });
 openBall.green.addEventListener("mouseout", () => {
-  mySound.pause();
-  mySound.currentTime = 0;
   arrow.style.display = "none";
 });
 
@@ -180,7 +172,6 @@ menuSelect.no.addEventListener("click", () => {
 menuSelect.yes.addEventListener("click", () => {
   if (i) {
     myCongrats.play();
-    myMusic.pause();
     paragraph.innerHTML = "Congratulations you have selected";
     pokeName = pokeName.slice(0, -1);
     paragraph.textContent += pokeName += "!";
