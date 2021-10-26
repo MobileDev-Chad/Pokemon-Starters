@@ -1,12 +1,12 @@
 // Sound effect & music
-var mySound = new Audio("./sounds/Pokemon (A Button) - Sound Effect (HD).mp3");
-var myMusic = new Audio("./sounds/Santalune Forest - Pokémon X & Y [OST].mp3");
-var myShake = new Audio("./sounds/pokeball_sound_effects.mp3");
-var myCongrats = new Audio(
+let mySound = new Audio("./sounds/Pokemon (A Button) - Sound Effect (HD).mp3");
+let myMusic = new Audio("./sounds/Santalune Forest - Pokémon X & Y [OST].mp3");
+let myShake = new Audio("./sounds/pokeball_sound_effects.mp3");
+let myCongrats = new Audio(
   "./sounds/Congratulations!  - Pokémon X & Y [OST].mp3"
 );
 
-var pokeSounds = {
+let pokeSounds = {
   red: new Audio("./sounds/Charmander Red.mp3"),
   blue: new Audio("./sounds/Squirtle Blue.mp3"),
   green: new Audio("./sounds/Bulbasaur Green.mp3"),
@@ -42,10 +42,10 @@ const paragraph = document.querySelector("p");
 // Get all pokemon
 const starters = document.querySelector(".monsters");
 
-let i;
-let m;
-let pokeVoice;
-let pokeName;
+let i = null;
+let m = null;
+let pokeVoice = null;
+let pokeName = null;
 let pokeStart = false;
 
 // Play music on mouse  movement
