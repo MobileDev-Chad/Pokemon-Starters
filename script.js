@@ -1,12 +1,12 @@
 // Sound effect & music
-var mySound = new Audio("./sounds/Pokemon (A Button) - Sound Effect (HD).mp3");
-var myMusic = new Audio("./sounds/Santalune Forest - Pokémon X & Y [OST].mp3");
-var myShake = new Audio("./sounds/pokeball_sound_effects.mp3");
-var myCongrats = new Audio(
+let mySound = new Audio("./sounds/Pokemon (A Button) - Sound Effect (HD).mp3");
+let myMusic = new Audio("./sounds/Santalune Forest - Pokémon X & Y [OST].mp3");
+let myShake = new Audio("./sounds/pokeball_sound_effects.mp3");
+let myCongrats = new Audio(
   "./sounds/Congratulations!  - Pokémon X & Y [OST].mp3"
 );
 
-var pokeSounds = {
+let pokeSounds = {
   red: new Audio("./sounds/Charmander Red.mp3"),
   blue: new Audio("./sounds/Squirtle Blue.mp3"),
   green: new Audio("./sounds/Bulbasaur Green.mp3"),
@@ -14,9 +14,9 @@ var pokeSounds = {
 
 // Get individual images of opened pokeball
 const openBall = {
-  red: document.querySelector(".pokeball:nth-of-type(1)"),
-  blue: document.querySelector(".pokeball:nth-of-type(2)"),
-  green: document.querySelector(".pokeball:nth-of-type(3)"),
+  red: document.querySelector(".pokeball:nth-of-type(2)"),
+  blue: document.querySelector(".pokeball:nth-of-type(3)"),
+  green: document.querySelector(".pokeball:nth-of-type(1)"),
 };
 
 // Get individual images of pokemon
@@ -42,10 +42,10 @@ const paragraph = document.querySelector("p");
 // Get all pokemon
 const starters = document.querySelector(".monsters");
 
-let i;
-let m;
-let pokeVoice;
-let pokeName;
+let i = null;
+let m = null;
+let pokeVoice = null;
+let pokeName = null;
 let pokeStart = false;
 
 // Play music on mouse  movement
@@ -72,9 +72,8 @@ function release() {
     setTimeout(() => {
       myShake.pause();
       pokeVoice.play();
-      i.src = "./images/openBall.png";
+      i.style.backgroundImage = "url('./images/openBall.png')";
       i.classList.remove("pokeballShake");
-      i.style.top = "280px";
       i.style.zIndex = "3";
       i.style.cursor = "default";
       m.style.visibility = "visible";
@@ -122,7 +121,7 @@ openBall.green.addEventListener("click", () => {
 openBall.red.addEventListener("mouseover", () => {
   if (!i) {
     arrow.style.display = "block";
-    arrow.style.left = "-35px";
+    arrow.style.left = "45%";
   }
 });
 openBall.red.addEventListener("mouseout", () => {
@@ -132,7 +131,7 @@ openBall.red.addEventListener("mouseout", () => {
 openBall.blue.addEventListener("mouseover", () => {
   if (!i) {
     arrow.style.display = "block";
-    arrow.style.left = "225px";
+    arrow.style.left = "58%";
   }
 });
 
@@ -143,7 +142,7 @@ openBall.blue.addEventListener("mouseout", () => {
 openBall.green.addEventListener("mouseover", () => {
   if (!i) {
     arrow.style.display = "block";
-    arrow.style.left = "-300px";
+    arrow.style.left = "32%";
   }
 });
 openBall.green.addEventListener("mouseout", () => {
