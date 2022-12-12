@@ -1,6 +1,5 @@
 // Sound effect & music
 let mySound = new Audio("./sounds/Pokemon (A Button) - Sound Effect (HD).mp3");
-let myMusic = new Audio("./sounds/Santalune Forest - Pokémon X & Y [OST].mp3");
 let myShake = new Audio("./sounds/pokeball_sound_effects.mp3");
 let myCongrats = new Audio(
   "./sounds/Congratulations!  - Pokémon X & Y [OST].mp3"
@@ -48,30 +47,15 @@ let pokeVoice = null;
 let pokeName = null;
 let pokeStart = false;
 
-// Play music on mouse  movement
-window.onmousemove = function () {
-  if (typeof myMusic.loop == "boolean") {
-    myMusic.loop = true;
-  } else {
-    myMusic.addEventListener(
-      "ended",
-      function () {
-        this.currentTime = 0;
-        this.play();
-      },
-      false
-    );
-  }
-  myMusic.play();
-};
-
-function release() {
+const release=()=> {
   if (!pokeStart) {
     i.classList.add("pokeballShake");
     myShake.play();
+    myShake.volume = 0.3;
     setTimeout(() => {
       myShake.pause();
       pokeVoice.play();
+      pokeVoice.volume = 0.3;
       i.style.backgroundImage = "url('./images/openBall.png')";
       i.classList.remove("pokeballShake");
       i.style.zIndex = "3";
@@ -118,46 +102,49 @@ openBall.green.addEventListener("click", () => {
   }
 });
 
-openBall.red.addEventListener("mouseover", () => {
-  if (!i) {
-    arrow.style.display = "block";
-    arrow.style.left = "45%";
-  }
-});
-openBall.red.addEventListener("mouseout", () => {
-  arrow.style.display = "none";
-});
+// openBall.red.addEventListener("mouseover", () => {
+//   if (!i) {
+//     arrow.style.display = "block";
+//     arrow.style.left = "45%";
+//   }
+// });
+// openBall.red.addEventListener("mouseout", () => {
+//   arrow.style.display = "none";
+// });
 
-openBall.blue.addEventListener("mouseover", () => {
-  if (!i) {
-    arrow.style.display = "block";
-    arrow.style.left = "58%";
-  }
-});
+// openBall.blue.addEventListener("mouseover", () => {
+//   if (!i) {
+//     arrow.style.display = "block";
+//     arrow.style.left = "58%";
+//   }
+// });
 
-openBall.blue.addEventListener("mouseout", () => {
-  arrow.style.display = "none";
-});
+// openBall.blue.addEventListener("mouseout", () => {
+//   arrow.style.display = "none";
+// });
 
-openBall.green.addEventListener("mouseover", () => {
-  if (!i) {
-    arrow.style.display = "block";
-    arrow.style.left = "32%";
-  }
-});
-openBall.green.addEventListener("mouseout", () => {
-  arrow.style.display = "none";
-});
+// openBall.green.addEventListener("mouseover", () => {
+//   if (!i) {
+//     arrow.style.display = "block";
+//     arrow.style.left = "32%";
+//   }
+// });
+// openBall.green.addEventListener("mouseout", () => {
+//   arrow.style.display = "none";
+// });
 
 // Pokemon voice sounds on click events
 monsters.charmander.addEventListener("click", () => {
   pokeVoice.play();
+  pokeVoice.volume = 0.3;
 });
 monsters.squirtle.addEventListener("click", () => {
   pokeVoice.play();
+  pokeVoice.volume = 0.3;
 });
 monsters.bulbasaur.addEventListener("click", () => {
   pokeVoice.play();
+  pokeVoice.volume = 0.3;
 });
 
 // When the user clicks no, reload the game
@@ -171,6 +158,7 @@ menuSelect.no.addEventListener("click", () => {
 menuSelect.yes.addEventListener("click", () => {
   if (i) {
     myCongrats.play();
+    myCongrats.volume = 0.3;
     paragraph.innerHTML = "Congratulations you have selected";
     pokeName = pokeName.slice(0, -1);
     paragraph.textContent += pokeName += "!";
