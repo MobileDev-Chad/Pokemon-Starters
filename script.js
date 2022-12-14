@@ -32,8 +32,10 @@ const menuSelect = {
   no: document.querySelector(".no"),
 };
 
-// Get the arrow
-const arrow = document.querySelector(".arrow");
+// Get the arrows
+const arrow_one = document.querySelector(".arrow:nth-of-type(1)");
+const arrow_two = document.querySelector(".arrow:nth-of-type(2)");
+const arrow_three = document.querySelector(".arrow:nth-of-type(3)");
 // Get the modal
 const modal = document.querySelector("#myModal");
 // Get paragraph in modal
@@ -63,7 +65,7 @@ const release=()=> {
       m.style.visibility = "visible";
       m.style.cursor = "pointer";
       starters.style.zIndex = "3";
-      arrow.style.display = "none";
+      // arrows.style.visibility = "hidden";
       modal.style.display = "block";
       menuSelect.menu.style.display = "block";
       paragraph.textContent += pokeName;
@@ -102,36 +104,33 @@ openBall.green.addEventListener("click", () => {
   }
 });
 
-// openBall.red.addEventListener("mouseover", () => {
-//   if (!i) {
-//     arrow.style.display = "block";
-//     arrow.style.left = "45%";
-//   }
-// });
-// openBall.red.addEventListener("mouseout", () => {
-//   arrow.style.display = "none";
-// });
+openBall.red.addEventListener("mouseover", () => {
+  if (!i) {
+    arrow_two.style.visibility = "visible";
+  }
+});
+openBall.red.addEventListener("mouseout", () => {
+  arrow_two.style.visibility = "hidden";
+});
 
-// openBall.blue.addEventListener("mouseover", () => {
-//   if (!i) {
-//     arrow.style.display = "block";
-//     arrow.style.left = "58%";
-//   }
-// });
+openBall.blue.addEventListener("mouseover", () => {
+  if (!i) {
+    arrow_three.style.visibility = "visible";
+  }
+});
 
-// openBall.blue.addEventListener("mouseout", () => {
-//   arrow.style.display = "none";
-// });
+openBall.blue.addEventListener("mouseout", () => {
+  arrow_three.style.visibility = "hidden";
+});
 
-// openBall.green.addEventListener("mouseover", () => {
-//   if (!i) {
-//     arrow.style.display = "block";
-//     arrow.style.left = "32%";
-//   }
-// });
-// openBall.green.addEventListener("mouseout", () => {
-//   arrow.style.display = "none";
-// });
+openBall.green.addEventListener("mouseover", () => {
+  if (!i) {
+    arrow_one.style.visibility = "visible";
+  }
+});
+openBall.green.addEventListener("mouseout", () => {
+  arrow_one.style.visibility = "hidden";
+});
 
 // Pokemon voice sounds on click events
 monsters.charmander.addEventListener("click", () => {
