@@ -146,15 +146,15 @@ body::-webkit-scrollbar {
 }
 
 .squirtle {
-  visibility: visible;
+  visibility: hidden;
 }
 
 .bulbasaur {
-  visibility: visible;
+  visibility: hidden;
 }
 
 .charmander {
-  visibility:visible;
+  visibility:hidden;
 }
 
 #spin {
