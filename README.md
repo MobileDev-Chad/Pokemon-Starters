@@ -17,7 +17,7 @@ npm run build
 ```
 
 ## Preview
-<img width="1440" alt="Pokemon Satrters" src="https://res.cloudinary.com/dare4cvkk/image/upload/v1671152893/GitHub%20readMe%20thumnails/pokemon_starters_scxulw.jpg">
+<img width="1440" alt="Pokemon Starters" src="https://res.cloudinary.com/dare4cvkk/image/upload/v1671152893/GitHub%20readMe%20thumnails/pokemon_starters_scxulw.jpg">
 
 
 
