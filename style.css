@@ -260,10 +260,10 @@ body::-webkit-scrollbar {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 3;
-  padding-top: 50px; /* Location of the box */
+  padding-top: 15px; /* Location of the box */
   left: 36%;
   top: 0;
-  width: 100%; /* Full width */
+  width: 90%; /* Full width */
   min-height: 100%; /* Full height */
 }
 /* Menu Content */
